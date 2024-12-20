@@ -1,0 +1,71 @@
+.signup-page {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;  /* Ensures the content takes up full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Add some space at the bottom to prevent footer overlap */
+  padding-bottom: 60px;
+}
+
+.signup-page h1 {
+  color: #e45219;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #8a7a75;
+}
+
+.error-message {
+  color: rgb(19, 5, 5);
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+/* Optional: Ensure footer doesn’t cover content */
+footer {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+}

@@ -1,0 +1,77 @@
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.home h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.home p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin: 20px 0;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 1em;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.promotions {
+  margin: 20px 0;
+}
+
+.promotions h2 {
+  font-size: 2em;
+}
+
+.promotions img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.filtered-menu {
+  margin-top: 40px;
+}
+
+.filtered-menu h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-item {
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.menu-item h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.menu-item p {
+  font-size: 1em;
+}

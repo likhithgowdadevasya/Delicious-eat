@@ -1,0 +1,51 @@
+/* App.css */
+/* Add these styles in index.css or App.css */
+
+
+/* Root Variables for Light Theme */
+:root {
+  --background-color: #f8f8f8;
+  --text-color: #333;
+  --primary-color: #ff5722;
+  --secondary-color: #e64a19;
+  --card-background: #ffffff;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #ff9800;
+  --secondary-color: #ff5722;
+  --card-background: #1e1e1e;
+}
+
+/* Apply Variables Globally */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Card Example */
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}

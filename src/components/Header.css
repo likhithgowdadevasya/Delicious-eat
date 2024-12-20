@@ -1,15 +1,79 @@
+/* Header Styles */
 .header {
-    background-color: #ff5722;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
+  background-color: #ff6a00; /* Orange background color for the header */
+  color: #ffffff; /* White text color for readability */
+  padding: 20px 40px; /* Increased padding for a larger header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em; /* Adjusted font size for the entire header */
+}
+
+.header h1 {
+  font-size: 1.4em; /* Increased font size for the title */
+  margin-right: auto; /* This pushes the title to the left */
+  color: #fff; /* White text color for the title */
+}
+
+nav {
+  display: flex;
+  gap: 30px; /* Increased gap between links */
+  align-items: center; /* Ensures the links align horizontally */
+}
+
+nav a {
+  color: #ffffff; /* White text color for the links */
+  text-decoration: none;
+  font-size: 1.1em; /* Adjusted font size for links */
+  padding: 12px 20px; /* Adjusted padding for better spacing */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #ff4500; /* Darker orange background color on hover */
+  color: #ffffff; /* White text color on hover */
+}
+
+.theme-toggle {
+  padding: 8px 15px; /* Adjusted padding for a balanced button size */
+  font-size: 1em; /* Slightly larger font size for the button */
+  cursor: pointer;
+  background-color: #444444; /* Dark button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #ff4500; /* Dark orange color on hover for the button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack the header elements vertically on smaller screens */
+    justify-content: center;
     align-items: center;
+    padding: 15px 20px; /* Reduced padding for mobile screens */
   }
-  
-  .header nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+
+  .header h1 {
+    font-size: 2em; /* Adjusted font size for the title on small screens */
   }
-  
+
+  nav {
+    flex-direction: column; /* Stack the nav items vertically */
+    gap: 10px; /* Reduced gap between links */
+  }
+
+  nav a {
+    font-size: 1.2em; /* Increased font size for better readability on mobile */
+  }
+
+  .theme-toggle {
+    font-size: 1.2em; /* Increased button size for better touch interaction */
+  }
+}

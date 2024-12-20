@@ -1,0 +1,19 @@
+.contact-page {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  background-color: #ff5722;
+  color: white;
+  padding: 100px;
+  border: none;
+  border-radius: 50px;
+}

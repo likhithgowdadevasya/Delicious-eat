@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -10,30 +11,39 @@ const Login = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    setError(""); // Clear error when user types
+    setError("");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const { email, password } = formData;
 
-    // Example validation
-    if (!email || !password) {
-      setError("Please fill in both fields.");
+    // Retrieve user data from localStorage
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find((user) => user.email === email);
+
+    if (!user) {
+      setError("No account found with this email.");
       return;
     }
 
-    // Dummy login success (replace with backend integration)
-    if (email === "user@example.com" && password === "password123") {
-      setSuccess("Login successful! Redirecting...");
-      setError("");
-    } else {
-      setError("Invalid email or password.");
-      setSuccess("");
+    if (user.password !== password) {
+      setError("Incorrect password.");
+      return;
     }
+
+    setSuccess("Login successful! Redirecting...");
+    setError("");
+
+    // Redirect after 2 seconds
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   };
 
   return (
